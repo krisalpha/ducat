@@ -34,6 +34,7 @@ class ComboTest implements ActionListener
 		fr.add(cb2);
 
 		cb1.addActionListener(this);
+		b1.addActionListener(this);
 		fr.setSize(500, 500);
 		fr.setVisible(true);
 	}
@@ -63,9 +64,9 @@ class ComboTest implements ActionListener
 			tempcb1 = new JComboBox(state);
 			
 			templ2.setBounds(30, 50, 100, 30);
-			temptext.setBounds(150, 50, 200, 30);
+			temptext1.setBounds(150, 50, 200, 30);
 			templ1.setBounds(30, 100, 100, 30);
-			tempcb1.setBounds(150, 150, 100, 30);
+			tempcb1.setBounds(150, 100, 100, 30);
 			tempb1.setBounds(150, 200, 100, 30);
 			
 			tempfr.add(templ1);

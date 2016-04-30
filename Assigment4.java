@@ -58,15 +58,15 @@ class ComboTest implements ActionListener
 			templ1 = new JLabel("State");
 			templ2 = new JLabel("New City");
 			temptext1 = new JTextField();
-			tempb1 = new JButton();
+			tempb1 = new JButton("Add");
 
-			String state[] = {"UP", "Raj", "MP"};
-			tempcb1 = new JComboBox(state);
+			//String state[] = {"UP", "Raj", "MP"};
+			//tempcb1 = new JComboBox(state);
 			
 			templ2.setBounds(30, 50, 100, 30);
 			temptext1.setBounds(150, 50, 200, 30);
 			templ1.setBounds(30, 100, 100, 30);
-			tempcb1.setBounds(150, 100, 100, 30);
+			cb1.setBounds(150, 100, 100, 30);
 			tempb1.setBounds(150, 200, 100, 30);
 			
 			tempfr.add(templ1);
@@ -77,6 +77,19 @@ class ComboTest implements ActionListener
 
 			tempfr.setSize(600, 600);
 			tempfr.setVisible(true);
+		}
+
+		if(e.getSource() == tempb1)
+		{
+			String value = temptext1.getText();
+			System.out.println(value);
+			String combotext = (String)cb1.getSelectedItem();
+			if(combotext.equals("UP"))
+				model1.addElement(value);
+			if(combotext.equals("Raj"))
+				model2.addElement(value);
+			if(combotext.equals("MP"))
+				model3.addElement(value);
 		}
 
 	}
